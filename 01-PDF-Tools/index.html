@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Free All-in-One PDF Tools – Merge, Split, Rotate, Compress & Edit PDF | MicroFree</title>
+    <meta name="title" content="Free All-in-One PDF Tools – Merge, Split, Rotate, Compress & Edit PDF | MicroFree" />
+    <meta name="description" content="10 free online PDF tools in one place. Merge, split, rotate, delete pages, add page numbers, watermark, inspect metadata, and compress PDF documents privately in your browser with zero uploads." />
+    <meta name="keywords" content="PDF tools, merge PDF, split PDF, compress PDF, rotate PDF, delete PDF pages, extract PDF pages, reorder PDF, PDF page numbers, watermark PDF, PDF metadata viewer, free PDF editor, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/pdf-tools/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/pdf-tools/" />
+    <meta property="og:title" content="Free All-in-One PDF Tools – Merge, Split, Rotate & Edit PDF | MicroFree" />
+    <meta property="og:description" content="10 free client-side PDF tools. Fast, private, and unlimited PDF manipulation right in your browser." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/pdf-tools/" />
+    <meta property="twitter:title" content="Free All-in-One PDF Tools | MicroFree" />
+    <meta property="twitter:description" content="Merge, split, rotate, number, and inspect PDFs 100% locally in your browser. No files uploaded to servers." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree PDF Tools Suite",
+      "url": "https://microfree.store/pdf-tools/",
+      "description": "Comprehensive client-side PDF utility for merging, splitting, rotating, deleting, watermarking, and analyzing PDF files without server uploads.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript and modern browser with WebAssembly / Canvas support",
+      "featureList": [
+        "Merge multiple PDF documents",
+        "Split PDF by page ranges",
+        "Browser-side PDF stream optimization and compression",
+        "Rotate individual or all pages",
+        "Delete unwanted PDF pages",
+        "Extract specific pages to a new PDF",
+        "Reorder PDF pages visually",
+        "Add custom page numbers with positioning",
+        "Add custom text watermark with opacity control",
+        "Inspect complete PDF metadata and document properties",
+        "100% private in-browser local processing"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD (mirrors FAQ in src/components/SEO.tsx) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are my PDF files uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Every operation runs in JavaScript inside your browser tab using the open-source pdf-lib library. The file is read from your device into memory, processed there, and the result is offered back to you as a download. Nothing is sent to MicroFree or any third party, and closing the tab discards the data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Compress PDF option reduce file size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It reloads the document and saves it again with compressed object streams, which packs the small internal objects (page dictionaries, font descriptors, cross-reference data) more efficiently. It does not downsample or recompress images, so text and graphics stay exactly as sharp as before. The trade-off is that savings are usually modest, and image-heavy or scanned PDFs may barely shrink at all."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did my compressed PDF not get any smaller?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most of the size in a typical PDF comes from embedded images and fonts, which this optimizer leaves untouched. If the original was already saved with object streams by a modern application, there is little left to gain, and the tool will report a 0% reduction. In that case keep your original file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "In what order are files merged?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Files are joined in the order they appear in the selected files list, which is the order you picked them. To change the order, remove the files and add them again in the sequence you want. Every page of every file is copied, so you can then use Delete Pages or Reorder Pages on the merged result if needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I write page numbers for Split, Extract, Delete and Reorder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use commas between pages and a dash for ranges, for example 1-3, 5, 8-10. Split creates one PDF per group you type (1-3, 5 and 8-10 above become three files, downloaded together as a ZIP); leaving Split blank makes one file per page. Extract and Delete use the same format, and Reorder accepts ranges too, so 5-1 reverses a five-page file. Page numbers always count from 1, regardless of any numbering printed on the pages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I remove or add a password with this tool?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. These tools do not add or remove PDF passwords, and a password-protected file will show an error when you open it. To remove a password you know, open the file in a desktop PDF reader and save or print it to a new unprotected PDF, then use that copy here."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will bookmarks, links and form fields survive merging or splitting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Page content, text and images are copied faithfully. However, Merge, Split, Extract, Delete and Reorder build a brand-new document from the copied pages, so document-level features such as the bookmark outline, interactive form fields and internal links that point to other pages may not carry over. Check the result if those features matter to you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use any language or symbol in a watermark?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Watermarks and page numbers use the standard Helvetica font built into every PDF reader, which covers Latin characters such as English and most Western European languages. Characters outside that set, such as Chinese, Arabic, Cyrillic or emoji, cannot be drawn and the tool will report an error."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a watermark a reliable way to protect a document?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A watermark is a visible label, not a security control. It is drawn as text on top of each page and a determined person with PDF editing software can remove it. It is useful for marking drafts or showing who a copy was intended for, but it does not prevent copying, printing or editing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the largest PDF I can process?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no fixed limit in the tool. Because the whole file is held in your device memory while it is processed, the practical limit depends on your browser and hardware. Files of tens of megabytes are generally fine on a laptop; very large files or long merges on a phone may be slow or cause the tab to run out of memory."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

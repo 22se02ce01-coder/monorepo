@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://microfree.store/developer-toolbox/sitemap.xml

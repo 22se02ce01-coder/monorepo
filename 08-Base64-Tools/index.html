@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Free Base64 Encoder & Decoder – Text, Image & URL-Safe Base64 | MicroFree</title>
+    <meta name="title" content="Free Base64 Encoder & Decoder – Text, Image & URL-Safe Base64 | MicroFree" />
+    <meta name="description" content="Encode and decode Base64 online with full Unicode and emoji support. Convert text, images, and data URIs, toggle URL-safe output, and copy or download results — 100% in your browser." />
+    <meta name="keywords" content="base64 encode, base64 decode, base64 converter, text to base64, image to base64, base64 to image, url-safe base64, data uri generator, utf-8 base64, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/base64-tools/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/base64-tools/" />
+    <meta property="og:title" content="Free Base64 Encoder & Decoder – Text & Image | MicroFree" />
+    <meta property="og:description" content="Unicode-safe Base64 encoding and decoding for text and images, running entirely in your browser." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/base64-tools/" />
+    <meta property="twitter:title" content="Free Base64 Encoder & Decoder | MicroFree" />
+    <meta property="twitter:description" content="Encode/decode Base64 for text and images with URL-safe mode, no server uploads." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree Base64 Encoder & Decoder",
+      "url": "https://microfree.store/base64-tools/",
+      "description": "Encode and decode Base64 for text, images, and data URIs with Unicode-safe UTF-8 handling and URL-safe output options, entirely in the browser.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript",
+      "featureList": [
+        "Text to Base64 and Base64 to text",
+        "Full UTF-8 and emoji support",
+        "URL-safe Base64 output",
+        "Image to Base64 data URI generator",
+        "Base64 to image preview and download",
+        "Copy and download results",
+        "100% private in-browser processing"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Base64 encoding used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Base64 represents binary data using 64 printable characters so it can travel through systems designed for text. It is commonly used to embed images in HTML or CSS as data URIs, carry binary data inside JSON or XML, encode email attachments and build HTTP Basic authentication headers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Base64 a form of encryption?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Base64 is an encoding, not encryption. Anyone can decode it without a key, so it must never be used on its own to protect passwords, tokens or other secrets."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is Base64 output larger than the input?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every 3 bytes of input become 4 characters of output, so encoded data is roughly 33 percent larger than the original, plus up to two padding characters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool handle emoji and non-English text correctly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Text is converted to UTF-8 bytes with the browser TextEncoder before encoding and decoded back with TextDecoder, so emoji, accented letters and scripts such as Arabic, Hindi and Chinese round-trip correctly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is URL-safe Base64?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard Base64 uses the + and / characters and = padding, which have special meanings in URLs. URL-safe Base64 replaces + with -, / with _ and removes the padding. Tick the URL-safe option when encoding text to produce this variant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I decode URL-safe Base64 or strings without padding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The decoder converts - and _ back to + and /, removes spaces and line breaks, and adds any missing = padding before decoding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I convert an image to a Base64 data URI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open the Image to Base64 tab and choose or drop an image file. The tool produces a full data URI that you can paste into an img src attribute or a CSS url() value. Tick the raw option if you only need the Base64 part without the data: prefix."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my decoded text contain strange characters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The decoder interprets the bytes as UTF-8 text. If the original data was binary, such as an image or compressed file, or text in a different character encoding, it cannot be displayed correctly and invalid sequences appear as replacement characters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my files or text sent to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All encoding and decoding happens entirely in your browser using native JavaScript APIs. Your text, images and tokens are never uploaded, logged or stored."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

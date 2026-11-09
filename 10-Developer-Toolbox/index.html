@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Developer Toolbox – 11 Free Online Dev Tools (Format, Encode, Convert) | MicroFree</title>
+    <meta name="title" content="Developer Toolbox – 11 Free Online Dev Tools (Format, Encode, Convert) | MicroFree" />
+    <meta name="description" content="A free all-in-one developer toolbox: URL encoder, HTML/CSS/JS formatter & minifier, XML formatter, HTML entities, UUID generator, Unix timestamp converter, regex tester, color converter, and a safe markdown previewer. 100% in-browser." />
+    <meta name="keywords" content="developer tools, url encoder, html formatter, css minifier, js beautifier, uuid generator, unix timestamp converter, regex tester, hex to rgb, markdown previewer, online dev toolbox, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/developer-toolbox/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/developer-toolbox/" />
+    <meta property="og:title" content="Developer Toolbox – 11 Free Online Dev Tools | MicroFree" />
+    <meta property="og:description" content="Formatters, encoders, converters, and generators for developers — all running privately in your browser." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/developer-toolbox/" />
+    <meta property="twitter:title" content="Developer Toolbox | MicroFree" />
+    <meta property="twitter:description" content="URL/HTML/CSS/JS/XML tools, UUID, timestamps, regex, color, and markdown — client-side and free." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree Developer Toolbox",
+      "url": "https://microfree.store/developer-toolbox/",
+      "description": "An all-in-one collection of browser-based developer utilities: URL encoder/decoder, HTML/CSS/JS formatter and minifier, XML formatter, HTML entity codec, UUID generator, Unix timestamp converter, regex tester, color code converter, and a safe markdown previewer.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript",
+      "featureList": [
+        "URL encoder and decoder",
+        "HTML formatter and minifier",
+        "CSS formatter and minifier",
+        "JavaScript formatter and conservative minifier",
+        "XML formatter",
+        "HTML entity encoder and decoder",
+        "UUID v4 generator (Web Crypto)",
+        "Unix timestamp converter",
+        "Regular expression tester",
+        "HEX / RGB / HSL color converter",
+        "Safe markdown previewer",
+        "100% in-browser client-side processing"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is my code or data sent to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Every utility in the Developer Toolbox runs entirely in your browser using native JavaScript APIs. Your snippets and text never leave your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How good is the JavaScript minifier?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is a conservative minifier: it strips comments and collapses whitespace while preserving strings, template literals and regular expressions. It is useful for quick size reduction, but it does not rename variables or remove unused code like a full optimising tool such as Terser or esbuild."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the Markdown previewer safe from XSS?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. All input is HTML-escaped first and only a small, known set of tags is generated. Links are only created for http and https addresses. Raw HTML, scripts, iframes and event handlers in your Markdown are shown as text and never executed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the generated UUIDs truly random?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The UUID generator uses crypto.getRandomValues, the browser cryptographically secure random source, to produce RFC 4122 version 4 identifiers. You can generate between 1 and 100 at a time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between URL encoding and HTML entity encoding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "URL encoding replaces unsafe characters with percent codes such as %20 so text can be placed inside a URL. HTML entity encoding replaces characters such as \u003c and & with entities such as &lt; and &amp; so text can be displayed safely inside HTML. They solve different problems and are not interchangeable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my converted timestamp show a date in 1970 or far in the future?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The value is probably in the wrong unit. A Unix timestamp in seconds read as milliseconds lands near 1970, and a millisecond value read as seconds lands thousands of years ahead. Switch between seconds and milliseconds in the converter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which regular expression syntax does the regex tester use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It uses the JavaScript RegExp engine built into your browser, with the g, i, m, s and u flags available. Most common syntax is shared with other languages, but some features differ from PCRE, Python or Java, so test in your target language as well."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which colour formats can the colour converter handle?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It converts between HEX, RGB and HSL. Changing any one of them updates the others and the live colour swatch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the XML formatter validate my XML?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It re-indents elements to make the structure readable but does not check the document for well-formedness or validate it against a schema or DTD."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Free Currency Converter – Live INR, USD, EUR & GBP Exchange Rates | MicroFree</title>
+    <meta name="title" content="Free Currency Converter – Live INR, USD, EUR & GBP Exchange Rates | MicroFree" />
+    <meta name="description" content="Convert between INR, USD, EUR, GBP, AED, JPY and 15+ world currencies using live mid-market exchange rates. Instant results, currency swap, and private in-browser conversion history." />
+    <meta name="keywords" content="currency converter, exchange rate calculator, INR to USD, USD to INR, EUR to GBP, live exchange rates, forex converter, money converter, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/currency-converter/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/currency-converter/" />
+    <meta property="og:title" content="Free Currency Converter – Live Exchange Rates | MicroFree" />
+    <meta property="og:description" content="Convert world currencies with fresh mid-market rates, directly in your browser." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/currency-converter/" />
+    <meta property="twitter:title" content="Free Currency Converter | MicroFree" />
+    <meta property="twitter:description" content="Live INR, USD, EUR, GBP and more — fast, private currency conversion." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree Currency Converter",
+      "url": "https://microfree.store/currency-converter/",
+      "description": "Convert between major world currencies using live mid-market exchange rates fetched securely in the browser, with currency swap and private local conversion history.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript and internet access for live rates",
+      "featureList": [
+        "Live mid-market exchange rates from a free public feed",
+        "INR, USD, EUR, GBP, AED, CAD, AUD, JPY and more",
+        "One-click currency swap",
+        "Effective per-unit rate display",
+        "Exchange-rate timestamp and source attribution",
+        "Clearly labelled demo fallback when offline",
+        "Private in-browser recent conversion history"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Where do the exchange rates come from?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your browser fetches them from a third-party service, the Exchange Rate API at open.er-api.com, which returns a table of rates against the US dollar. The time that feed last updated its rates is shown under the result."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are these live, real-time rates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. They are daily reference rates; the provider updates its data roughly once a day. They are suitable for estimates and comparisons, but they are not live market quotes and must not be used for trading."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my bank or card give me the same rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually not. Banks, card networks and money-transfer services add their own margin and sometimes fees, so the amount you actually receive will normally be lower than the result shown here. Always confirm the final rate with your provider before a real transaction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I tell how much a transfer service is really charging?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Convert the same amount here and compare it with the amount the service says will arrive. The difference, plus any separate fee, is the true cost. For example, at a reference rate of 83.30 and an offered rate of 82.00, sending 1,000 USD costs about 1,300 INR in margin."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are rates between two non-dollar currencies calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All rates are quoted against the US dollar, so the converter divides your amount by the source currency's rate and multiplies by the target currency's rate. For instance, if 1 USD = 0.92 EUR and 1 USD = 83.30 INR, then 1 EUR is about 90.54 INR."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if the rate service is unavailable?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The converter switches to a small built-in demo rate table and displays a clear warning that the figures are not live. Demo results are examples only. Press the refresh button to try the live feed again."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which currencies are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Twenty widely used currencies: USD, INR, EUR, GBP, AED, CAD, AUD, JPY, CNY, SGD, CHF, HKD, NZD, ZAR, SAR, BRL, RUB, KRW, MXN and THB. Any of them can be converted into any other."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the conversion history work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Press \"Save to history\" to keep a conversion. Up to eight recent entries are stored in your browser's local storage on this device, and the clear button removes them. History is never uploaded."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my conversion data sent anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The only network request goes to open.er-api.com to download the US-dollar rate table. It does not include the amounts or currencies you convert, although, like any web request, the provider can see technical details such as your IP address. All calculations run in your browser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this converter for trading or financial decisions?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The rates are indicative and may be up to a day old. They are provided for information only and are not financial advice or an offer to buy or sell currency."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

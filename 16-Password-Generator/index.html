@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Free Secure Password Generator – Strong Random Passwords | MicroFree</title>
+    <meta name="title" content="Free Secure Password Generator – Strong Random Passwords | MicroFree" />
+    <meta name="description" content="Generate strong, random, cryptographically secure passwords in your browser using the Web Crypto API. Custom length, symbols, numbers, ambiguous-character exclusion, strength meter, and zero transmission." />
+    <meta name="keywords" content="password generator, strong password, random password, secure password generator, crypto getRandomValues, passphrase, password strength, free password tool, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/password-generator/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/password-generator/" />
+    <meta property="og:title" content="Free Secure Password Generator – Strong Random Passwords | MicroFree" />
+    <meta property="og:description" content="Create strong random passwords locally with the Web Crypto API. Nothing is ever sent to a server." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/password-generator/" />
+    <meta property="twitter:title" content="Free Secure Password Generator | MicroFree" />
+    <meta property="twitter:description" content="Cryptographically secure password generation that runs entirely in your browser." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree Password Generator",
+      "url": "https://microfree.store/password-generator/",
+      "description": "Generate strong, cryptographically secure random passwords with configurable length and character sets, entropy-based strength estimation, and fully in-browser processing.",
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript and the Web Crypto API",
+      "featureList": [
+        "Cryptographically secure generation via crypto.getRandomValues()",
+        "Adjustable length from 4 to 64 characters",
+        "Uppercase, lowercase, numbers, and symbol toggles",
+        "Exclude ambiguous characters option",
+        "Guarantee at least one of each selected character class",
+        "Bulk generation of multiple passwords",
+        "Entropy-based strength meter",
+        "100% in-browser — passwords never leave your device"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How random are these passwords?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every character is chosen with the browser's Web Crypto API (crypto.getRandomValues), a cryptographically secure random source, not Math.random(). The tool also uses rejection sampling so every character in your chosen pool is exactly equally likely, with no bias toward any letter, digit or symbol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes a password strong?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Strength comes from entropy, which grows with both the length of the password and the size of the character pool. Length has the biggest effect: a 20-character password using all four character types reaches about 130 bits, while a 12-character one reaches about 78 bits."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the strength meter calculate its rating?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It multiplies the length by log2 of the pool size to estimate bits of entropy, then labels the result Very Weak (under 28 bits), Weak (under 50), Fair (under 80), Strong (under 120) or Very Strong (120 or more). It rates your current settings for random output and cannot judge a password you invented yourself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my generated passwords sent anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Generation happens entirely inside your browser tab. Passwords are never transmitted to a server, logged or stored, and closing or refreshing the page discards them, so copy the one you want before leaving."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why exclude ambiguous characters?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Characters such as capital O and zero, or lowercase l and the number one, are easy to confuse when a password is typed by hand or read aloud. The option removes them along with brackets, quotes and some punctuation. It shrinks the pool from 89 to 72 characters, so add a couple of extra characters of length to compensate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does \"Include at least one of each type\" do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It guarantees that the password contains at least one character from every set you enabled, which helps with websites that enforce composition rules. The guaranteed characters are shuffled into random positions with a secure shuffle so they are not predictable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long should my password be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For everyday accounts stored in a password manager, 16 to 20 characters with all character types is a sensible default. For a master password or anything protecting other secrets, use 24 characters or more. The slider allows any length from 4 to 64."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I generate several passwords at once?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Choose 1, 3, 5, 10 or 20 and the tool creates that many passwords, each generated independently with the same settings. Every password has its own copy button."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should I do if a website will not accept symbols?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Turn symbols off and increase the length instead. Removing symbols reduces the pool from 89 to 62 characters, but adding a few extra characters more than makes up for the difference."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a generated password enough to keep my account safe?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It removes the risk of guessable passwords, but you should still use a unique password for every account, store them in a reputable password manager and enable two-factor authentication. No password can protect you from malware on your device or from typing it into a phishing site."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

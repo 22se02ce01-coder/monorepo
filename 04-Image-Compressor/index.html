@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Free Online Image Compressor – Compress JPG, PNG & WebP Locally | MicroFree</title>
+    <meta name="title" content="Free Online Image Compressor – Compress JPG, PNG & WebP Locally | MicroFree" />
+    <meta name="description" content="Compress JPG, JPEG, PNG and WebP images online with adjustable quality or a target size in KB. Drag-and-drop batch compression, custom quality, target KB, and 100% private in-browser processing." />
+    <meta name="keywords" content="image compressor, compress image online, reduce image size, compress JPG, compress PNG, compress WebP, batch image compressor, free photo optimizer, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/image-compressor/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/image-compressor/" />
+    <meta property="og:title" content="Free Online Image Compressor – Compress JPG, PNG, WebP | MicroFree" />
+    <meta property="og:description" content="Reduce image file sizes with adjustable quality, a before/after size comparison and zero server uploads." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/image-compressor/" />
+    <meta property="twitter:title" content="Free Online Image Compressor | MicroFree" />
+    <meta property="twitter:description" content="Fast, private image optimizer running entirely inside your browser. No data leaves your computer." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree Image Compressor",
+      "url": "https://microfree.store/image-compressor/",
+      "description": "Compress JPG, PNG, and WebP images directly in your browser with before/after size comparison, a custom quality slider, target size in KB, and per-image download.",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript and HTML5 Canvas support",
+      "featureList": [
+        "Batch compression for multiple images",
+        "Custom quality slider from 10% to 95%",
+        "Target file size (KB) auto-calibration",
+        "Before and after visual comparison",
+        "Original vs compressed size with percentage reduction",
+        "Individual and batch downloads",
+        "100% client-side privacy without server uploads"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD (mirrors FAQ in src/components/SEO.tsx) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are my images uploaded to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The images are decoded, re-encoded, and previewed entirely inside your browser using the HTML5 Canvas API. The files are never sent to MicroFree or any other server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which image formats can I compress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can upload JPG/JPEG, PNG, and WebP files. The output can stay in the original format or be converted to WebP, JPEG, or PNG using the Output Format menu."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does the quality slider actually change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The slider (10% to 95%) sets the encoder quality used when the image is saved as JPEG or WebP. Lower values discard more fine detail and produce smaller files. It has no effect on PNG output, because PNG is a lossless format."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the Target Size (KB) option work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you enter a target size and the output format is JPEG or WebP, the tool tries several quality levels in a short binary search and keeps the highest quality it found that fits under your limit, overriding the slider. If no tested quality fits, the image is saved at your slider quality instead, so always check the final size. The target size is ignored for PNG output."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my compressed PNG not much smaller, or even the same size?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "PNG is lossless, so re-saving it in the browser cannot throw away detail the way JPEG or WebP can. If an already optimized PNG is re-encoded, the result may be about the same size or occasionally larger. For big savings on photos or screenshots, convert to WebP or JPEG instead."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens to transparent backgrounds?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Transparency is kept when the output is PNG or WebP. JPEG does not support transparency, so when an image is converted to JPEG the transparent areas are filled with white."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the tool resize my images or keep EXIF data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The pixel dimensions stay exactly the same; the tool does not resize or crop. Because each image is redrawn on a canvas and re-encoded, metadata such as EXIF camera details and GPS location is not copied into the compressed file."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my converted file still have the old extension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Downloaded files are named compressed_ followed by the original file name, so a PNG converted to WebP keeps the .png extension in its name. The file content is in the new format; rename the extension to .webp or .jpg if another program relies on it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a limit on file size or number of images?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no fixed limit set by the tool. Images are processed one after another in your browser, so the practical limit depends on your device memory. Very large photos or long batches may be slow on phones and older computers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the image compressor free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The tool is free to use, does not require an account, and does not add watermarks to your images."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

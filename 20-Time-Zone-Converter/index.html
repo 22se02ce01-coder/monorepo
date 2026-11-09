@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>World Time Zone Converter – Compare Times Across Cities | MicroFree</title>
+    <meta name="title" content="World Time Zone Converter – Compare Times Across Cities | MicroFree" />
+    <meta name="description" content="Convert and compare time instantly across world cities and time zones. DST-aware offsets, live world clock, 12/24-hour format, and multi-zone meeting planning — all in your browser." />
+    <meta name="keywords" content="time zone converter, world clock, timezone comparison, meeting planner across time zones, UTC offset, daylight saving time, IST to EST, GMT converter, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/time-zone-converter/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/time-zone-converter/" />
+    <meta property="og:title" content="World Time Zone Converter – Compare Times Across Cities | MicroFree" />
+    <meta property="og:description" content="DST-aware time zone conversion and a live multi-city world clock, running entirely in your browser." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/time-zone-converter/" />
+    <meta property="twitter:title" content="World Time Zone Converter | MicroFree" />
+    <meta property="twitter:description" content="Compare a chosen date and time across many world cities with accurate daylight-saving offsets." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree World Time Zone Converter",
+      "url": "https://microfree.store/time-zone-converter/",
+      "description": "Convert a specific date and time between world cities with daylight-saving-aware UTC offsets, compare multiple zones at once, and view a live world clock.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript and the Intl API",
+      "featureList": [
+        "Convert a date and time between IANA time zones",
+        "Daylight-saving-aware UTC offset calculation",
+        "Compare many world cities simultaneously",
+        "Live updating world clock mode",
+        "12-hour and 24-hour time formats",
+        "Next-day and previous-day indicators",
+        "100% in-browser client-side processing"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this account for daylight saving time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Offsets are calculated for the exact date and time you choose using the IANA time zone rules built into your browser. A conversion for a July date and a January date in the same city can therefore correctly differ by an hour. No fixed offsets are hard-coded."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does a city show \"+1 day\" or \"−1 day\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When two places are far apart, the local date in the target city can fall on the day after or before your source date. The badge warns you so you do not schedule a call on the wrong day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a zone abbreviation and a UTC offset?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An abbreviation such as EST or CET is a human label, and some abbreviations mean different things in different countries. The UTC offset, such as UTC+05:30, is the exact difference from Coordinated Universal Time at that moment, which is why the tool always shows it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do some cities show GMT+5:30 instead of a name like IST?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Short zone names come from your browser's built-in formatting. For many zones the browser provides a generic label based on the offset rather than a local abbreviation. The UTC offset shown next to it is always exact."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between Live Now and Pick Date & Time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Live Now shows the current moment in every city and updates every second, like a world clock. Pick Date & Time lets you enter a specific date and time in your source zone, which is what you need to plan a meeting or a launch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I make another city the source time?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the swap button on that city's card. It becomes the source zone, and the previous source moves onto the comparison board."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is my city not in the list?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The list is curated to over fifty major cities and regions plus UTC, covering the main offsets around the world. If your city is missing, pick a listed city in the same time zone. You can search by city, country or IANA zone name."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens with a time that is skipped or repeated when clocks change?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When clocks spring forward, some local times never occur, and when they fall back, some occur twice. The converter resolves such a time to a nearby instant, so double-check any meeting scheduled within an hour of a clock change."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the gap between two cities change during the year?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Countries change their clocks on different dates, and some never change them. The United States and Europe switch on different weekends, the southern hemisphere switches in the opposite season, and India and Japan do not use daylight saving at all."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my location or schedule sent anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Your time zone is read from your browser settings, and all conversions run locally with the browser's Intl date engine. Your chosen cities, dates and times are not sent to any server or stored."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

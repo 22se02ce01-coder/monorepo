@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Free GST Calculator – Add & Remove GST with CGST/SGST/IGST | MicroFree</title>
+    <meta name="title" content="Free GST Calculator – Add & Remove GST with CGST/SGST/IGST | MicroFree" />
+    <meta name="description" content="Calculate Indian GST instantly. Add GST to a base price or remove GST from an inclusive amount, with 5%, 12%, 18%, 28% or custom rates and full CGST, SGST and IGST breakdowns." />
+    <meta name="keywords" content="GST calculator, Indian GST calculator, add GST, remove GST, CGST SGST calculator, IGST calculator, GST inclusive, GST exclusive, 18 percent GST, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/gst-calculator/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/gst-calculator/" />
+    <meta property="og:title" content="Free GST Calculator – Add & Remove GST Online | MicroFree" />
+    <meta property="og:description" content="Add or remove GST with instant CGST, SGST and IGST breakdowns and Indian rupee formatting." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/gst-calculator/" />
+    <meta property="twitter:title" content="Free GST Calculator | MicroFree" />
+    <meta property="twitter:description" content="Instant GST inclusive and exclusive calculations with CGST/SGST/IGST splits." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree GST Calculator",
+      "url": "https://microfree.store/gst-calculator/",
+      "description": "Add or remove Indian Goods and Services Tax with 5%, 12%, 18%, 28% or custom rates, plus CGST, SGST and IGST breakdowns and rupee formatting.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript",
+      "featureList": [
+        "Add GST to a tax-exclusive base price",
+        "Remove GST from a tax-inclusive amount",
+        "Preset 0%, 5%, 12%, 18%, 28% rates plus custom rate",
+        "CGST and SGST intra-state breakdown",
+        "IGST inter-state breakdown",
+        "Indian rupee currency formatting",
+        "100% in-browser private calculation"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between adding and removing GST?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Adding GST starts from a tax-exclusive base price and calculates the tax on top of it. Removing GST starts from a tax-inclusive total and works backwards to find the original taxable value and the tax already contained within it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What formulas does the calculator use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "To add GST: GST = base × rate ÷ 100 and total = base + GST. To remove GST: base = total ÷ (1 + rate ÷ 100) and GST = total − base. For example, ₹1,000 plus 18% GST is ₹1,180, and ₹1,180 including 18% GST has a taxable value of ₹1,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why can’t I just subtract 18% from a GST-inclusive price?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because the 18% was calculated on the base price, not on the total. Taking 18% off ₹1,180 gives ₹967.60, which is wrong. Dividing ₹1,180 by 1.18 gives the correct taxable value of ₹1,000."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are CGST and SGST calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For an intra-state supply, where the supplier and the place of supply are in the same state, the total GST is split equally into CGST (Central GST) and SGST (State GST). For example, 18% GST becomes 9% CGST plus 9% SGST. In union territories without a legislature, UTGST takes the place of SGST at the same rate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "When does IGST apply instead of CGST and SGST?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "IGST (Integrated GST) generally applies to inter-state supplies, where the supplier and the place of supply are in different states or union territories, and to imports. The full rate is charged as a single IGST line instead of being split. Choose Inter-State in the calculator to see this view."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which GST rates are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The preset buttons cover 0%, 5%, 12%, 18% and 28%, and a custom field accepts any other rate. GST rates are revised by the GST Council from time to time, and a 2025 rationalisation moved many items between slabs, so always confirm the current rate for your goods or service before relying on a figure."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the calculator include compensation cess?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not separately. It applies a single rate. If you need to include an additional cess, you can add the GST rate and the cess percentage together in the custom field to see the combined tax, but the CGST/SGST split shown will then include the cess, so treat it as an estimate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why might the CGST and SGST figures differ from my invoice by a paisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator rounds each figure to two decimal places. Billing software may round per line item, per invoice, or to the nearest rupee, so tiny differences of a paisa or so are normal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I copy the result into an invoice or message?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The Copy Results button copies a plain-text summary of the mode, rate, taxable value, GST amount, total and the CGST/SGST or IGST split to your clipboard so you can paste it anywhere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this tax advice, and is my data stored?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is not tax advice. Results are estimates based on standard GST formulas, and the correct rate and treatment depend on the item, the place of supply and current rules, so confirm with a qualified professional for filings. All calculations run in your browser and nothing you type is uploaded or stored."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

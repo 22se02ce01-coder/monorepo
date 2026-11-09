@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Free JSON Formatter, Validator & Beautifier Online | MicroFree</title>
+    <meta name="title" content="Free JSON Formatter, Validator & Beautifier Online | MicroFree" />
+    <meta name="description" content="Format, beautify, minify and validate JSON online with precise line and column error reporting and syntax highlighting. 100% in-browser — your JSON is never uploaded." />
+    <meta name="keywords" content="json formatter, json validator, json beautifier, json minifier, format json online, validate json, json syntax highlighter, pretty print json, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/json-formatter/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/json-formatter/" />
+    <meta property="og:title" content="Free JSON Formatter, Validator & Beautifier | MicroFree" />
+    <meta property="og:description" content="Beautify, minify and validate JSON with line/column error locations — entirely in your browser." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/json-formatter/" />
+    <meta property="twitter:title" content="Free JSON Formatter & Validator | MicroFree" />
+    <meta property="twitter:description" content="Pretty-print, minify and validate JSON client-side with syntax highlighting and error locations." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree JSON Formatter",
+      "url": "https://microfree.store/json-formatter/",
+      "description": "Format, beautify, minify and validate JSON with syntax highlighting and exact line and column error locations, running entirely in the browser with no server uploads.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript",
+      "featureList": [
+        "JSON beautify and pretty-print",
+        "JSON minify and compact",
+        "JSON validation with line and column error reporting",
+        "Syntax highlighting",
+        "Configurable 2-space, 4-space or tab indentation",
+        "Copy to clipboard and download .json",
+        "100% in-browser client-side privacy"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does the validator pinpoint errors?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tool parses your text with the browser native JSON parser. When parsing fails and the browser reports a character position, that position is converted into a line and column number so you can jump to the trailing comma, missing quote or stray bracket. The actual mistake is often just before the reported spot."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between beautify and minify?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Beautify expands JSON with consistent indentation and line breaks so people can read nested structures easily. Minify removes every optional space and line break to produce the smallest valid text, which is useful for network transfer or embedding."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which indentation options are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can beautify with 2 spaces, 4 spaces or tab characters. Choose the option before clicking Beautify; it does not affect minified output."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my JSON sent to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Parsing, formatting, highlighting and validation all run locally in your browser tab using native JavaScript. Your data is never uploaded or stored."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can it handle large JSON documents?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, within the limits of your browser memory. There is no upload cap because nothing is uploaded, but highlighting very large outputs of many megabytes can make the page slower to respond."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my JSON with comments or trailing commas fail validation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The tool follows the strict JSON standard, which does not allow comments, trailing commas, single-quoted strings or unquoted keys. Formats such as JSONC and JSON5 permit these, so remove them before formatting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did a very large number change after formatting?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "JavaScript numbers can only represent integers exactly up to 9,007,199,254,740,991. Larger integers lose precision when parsed and re-written. If you need exact large IDs, store them as strings in your JSON."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does formatting change the order of my keys?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Key order is preserved in general, with one exception: keys that look like non-negative whole numbers, such as \"1\" or \"42\", are written first in ascending numeric order, because that is how JavaScript objects order such keys."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do the keys, nodes and depth numbers mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "After a successful run, keys is the total number of object keys, nodes is the total number of values including objects, arrays and the root, and depth is how many levels deep the most nested value sits."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

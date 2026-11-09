@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Text Case Converter – UPPERCASE, lowercase, Title Case & Word Counter | MicroFree</title>
+    <meta name="title" content="Text Case Converter – UPPERCASE, lowercase, Title Case & Word Counter | MicroFree" />
+    <meta name="description" content="Convert text to uppercase, lowercase, title case, sentence case, camelCase, snake_case and kebab-case. Count words, characters, lines and reading time instantly in your browser." />
+    <meta name="keywords" content="text case converter, uppercase to lowercase, title case converter, sentence case, word counter, character counter, camelcase, snake case, kebab case, reverse text, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/text-converter/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/text-converter/" />
+    <meta property="og:title" content="Text Case Converter & Word Counter | MicroFree" />
+    <meta property="og:description" content="Change text case and count words, characters and lines instantly — 100% in your browser." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/text-converter/" />
+    <meta property="twitter:title" content="Text Case Converter & Word Counter | MicroFree" />
+    <meta property="twitter:description" content="Convert case styles and analyze text statistics without uploading anything." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree Text Case Converter",
+      "url": "https://microfree.store/text-converter/",
+      "description": "Transform text between case styles (upper, lower, title, sentence, camel, snake, kebab) and analyze word, character, line and reading-time statistics entirely in the browser.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript",
+      "featureList": [
+        "UPPERCASE, lowercase, Title Case and Sentence case conversion",
+        "camelCase, snake_case and kebab-case formatting",
+        "Live word, character, line, sentence and paragraph counters",
+        "Reading-time estimation",
+        "Remove extra spaces, duplicate and empty lines",
+        "Reverse text, reverse word order and sort lines",
+        "100% private in-browser processing"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the difference between Title Case and Capitalize Words?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Capitalize Words uppercases the first letter of every word and leaves the remaining letters unchanged. Title Case follows headline style: it lowercases each word, capitalizes its first letter, and keeps short words such as a, an, the, and, of, to, in and for lowercase unless they begin the text."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did my acronyms become lowercase?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Title Case and Sentence case lowercase every word before capitalizing, so NASA becomes Nasa and proper nouns inside a sentence lose their capitals. Fix those words by hand afterwards, or use Capitalize Words, which never lowercases letters."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are camelCase, snake_case and kebab-case used for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They are naming conventions for code and URLs. camelCase (myVariableName) is common for JavaScript variables, snake_case (my_variable_name) for Python and database columns, and kebab-case (my-variable-name) for URL slugs, CSS classes and file names. The converter splits on spaces, punctuation and existing camel-case boundaries, then joins the words in the chosen style."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is reading time calculated?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It divides the word count by an average silent-reading speed of 200 words per minute and shows the result in minutes and seconds. It is an estimate; technical or unfamiliar text takes longer to read."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How are words, sentences and paragraphs counted?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Words are runs of characters separated by spaces, tabs or line breaks. Sentences are counted by ending punctuation (full stops, question marks and exclamation marks), so abbreviations such as e.g. can inflate the count. Paragraphs are blocks of text separated by at least one blank line."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What exactly does Remove Extra Spaces do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It collapses runs of spaces and tabs into a single space, trims spaces from the start and end of every line, and reduces three or more consecutive line breaks to a single blank line. Single line breaks are kept."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Remove Duplicate Lines case-sensitive?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lines are removed only when they match an earlier line exactly, including capitalization and spacing. The first occurrence is kept in its original position. Run Remove Extra Spaces first if lines differ only by stray spaces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does Sort Lines put 10 before 2?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lines are sorted alphabetically as text, so they are compared character by character. Pad numbers with leading zeros (02, 10) if you need numeric order."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I undo a transformation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no undo button, because each action rewrites the editor in place. Before a lossy step such as lowercase or a code-style conversion, copy your original text or download it as a .txt file so you can restore it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this tool send my text anywhere?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Every transformation and count runs locally in JavaScript in your browser tab. Your text is never uploaded, logged or stored, and it is gone when you close or refresh the page."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

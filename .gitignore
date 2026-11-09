@@ -1,0 +1,30 @@
+# Dependencies (reinstalled from package-lock.json on every build)
+node_modules/
+
+# Build output (Cloudflare Pages rebuilds these)
+dist/
+deploy/
+*.tsbuildinfo
+
+# Local run-all.sh / stop-all.sh state
+.run-logs/
+.run-pids
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment / secrets
+.env
+.env.*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
+
+# Personal notes (not part of the website)
+quetion.txt
+testgrid.txt

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Free JWT Decoder – Decode & Inspect JSON Web Tokens Online | MicroFree</title>
+    <meta name="title" content="Free JWT Decoder – Decode & Inspect JSON Web Tokens Online | MicroFree" />
+    <meta name="description" content="Decode JWT (JSON Web Token) header and payload instantly in your browser. Inspect claims, expiration, issued-at times and custom fields. 100% client-side — your token is never uploaded." />
+    <meta name="keywords" content="jwt decoder, decode jwt, json web token, jwt parser, jwt claims, jwt expiration checker, decode jwt payload, jwt header, free jwt tool, MicroFree" />
+    <meta name="author" content="MicroFree" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://microfree.store/jwt-decoder/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://microfree.store/jwt-decoder/" />
+    <meta property="og:title" content="Free JWT Decoder – Decode JSON Web Tokens Online | MicroFree" />
+    <meta property="og:description" content="Inspect JWT header, payload and claims locally in your browser. Signatures are never verified or sent to a server." />
+    <meta property="og:image" content="https://microfree.store/MicroFreeLogo.png" />
+    <meta property="og:site_name" content="MicroFree Tools" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://microfree.store/jwt-decoder/" />
+    <meta property="twitter:title" content="Free JWT Decoder | MicroFree" />
+    <meta property="twitter:description" content="Decode and inspect JSON Web Tokens without uploading them to any server." />
+    <meta property="twitter:image" content="https://microfree.store/MicroFreeLogo.png" />
+
+    <!-- Mobile theme & Icons -->
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="icon" type="image/png" href="./MicroFreeLogo.png" />
+    <link rel="apple-touch-icon" href="./MicroFreeLogo.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data: WebApplication JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "MicroFree JWT Decoder",
+      "url": "https://microfree.store/jwt-decoder/",
+      "description": "Decode and inspect JSON Web Token header and payload claims, including expiration and issued-at timestamps, entirely in the browser with no server upload.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All (Modern Web Browser)",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "browserRequirements": "Requires JavaScript",
+      "featureList": [
+        "Decode JWT header and payload",
+        "Human-readable standard claim table (iss, sub, aud, iat, nbf, exp, jti)",
+        "Token expiration and not-before status detection",
+        "Custom claim inspection",
+        "Copy decoded JSON to clipboard",
+        "100% in-browser client-side processing — no token upload"
+      ]
+    }
+    </script>
+    <!-- Structured Data: FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What are the three parts of a JWT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A signed JSON Web Token has three dot-separated segments: the header, which describes the signing algorithm and token type; the payload, which contains the claims; and the signature, which the issuer uses to detect tampering. This tool decodes the header and payload, which are only base64url-encoded, not encrypted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does decoding a JWT verify that it is valid or trustworthy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Decoding only reveals the contents of the header and payload. It does not check the signature, so it cannot prove the token was issued by a trusted party or that it has not been altered. Signature verification requires the issuer secret or public key and should be done on your backend."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my token sent to a server?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All base64url decoding and claim parsing happens locally in your browser using native JavaScript. Your token is never uploaded or stored."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does the payload show numbers for exp and iat?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Time-based claims such as exp (expiration), nbf (not before) and iat (issued at) are stored as Unix timestamps, the number of seconds since 1 January 1970 UTC. The decoder converts them into readable dates and times in your local time zone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the tool decide whether a token is expired?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It compares the exp and nbf claims with the current time on your device. If nbf is in the future the token is shown as not yet valid, if exp has passed it is shown as expired, and if there is no exp claim it is shown as having no expiration. An incorrect device clock will give an incorrect result."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can anyone read the data inside a JWT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The header and payload of a signed JWT are only encoded, so anyone who has the token can decode them. Never put passwords, API keys or other secrets in a JWT payload."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I get an error saying the token must have 3 parts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A signed JWT always has exactly three segments separated by dots. The error usually means the token was cut off while copying, contains extra text, or is an encrypted JWE token, which has five parts and cannot be decoded without a key."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I include the word Bearer when pasting a token?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Paste only the token itself. If you copied the full Authorization header value, remove the word Bearer and the following space before pasting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between HS256 and RS256?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "HS256 signs the token with HMAC using one shared secret that both the issuer and the verifier must know. RS256 signs with an RSA private key held by the issuer, and anyone can verify it with the matching public key. The alg value in the header shows which one a token uses."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased selection:bg-brand-500 selection:text-white min-h-screen flex flex-col font-sans">
+    <div id="root" class="flex flex-col min-h-screen"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
