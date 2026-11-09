@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://microfree.store/qr-generator/sitemap.xml
+Sitemap: https://qrgenerator.microfree.store/sitemap.xml

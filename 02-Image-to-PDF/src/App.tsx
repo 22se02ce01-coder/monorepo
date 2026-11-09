@@ -19,8 +19,8 @@ export const App: React.FC = () => {
     <div className="flex min-h-screen flex-col bg-slate-50 text-slate-800">
       {/* Top Navigation */}
       <Header
-        onOpenAbout={() => { window.location.href = '/about/'; }}
-        onOpenPrivacy={() => { window.location.href = '/privacy-policy/'; }}
+        onOpenAbout={() => { window.location.href = 'https://microfree.store/about/'; }}
+        onOpenPrivacy={() => { window.location.href = 'https://microfree.store/privacy-policy/'; }}
       />
 
       {/* Main Content Area */}

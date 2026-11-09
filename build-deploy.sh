@@ -1,20 +1,21 @@
 #!/bin/bash
-# Builds the whole microfree.store site into ./deploy — ready for Cloudflare Pages.
+# Builds every MicroFree site into ./deploy, one folder per Cloudflare Pages project:
 #
-#   bash build-deploy.sh                          # build without ads (before AdSense approval request)
-#   bash build-deploy.sh ca-pub-1234567890123456  # build with AdSense code + ads.txt
+#   deploy/microfree-home/        -> microfree.store            (homepage, about, privacy, terms, ...)
+#   deploy/microfree-pdftools/    -> pdftools.microfree.store
+#   deploy/microfree-imagetopdf/  -> imagetopdf.microfree.store
+#   ...                              (mapping lives in scripts/sites.json)
 #
-# Result:
-#   deploy/index.html, about/, privacy-policy/, terms/, disclaimer/, contact/, sitemap.xml, robots.txt, ads.txt
-#   deploy/<tool-slug>/   (one folder per tool, e.g. deploy/json-formatter/)
+#   bash build-deploy.sh                          # without ads
+#   bash build-deploy.sh ca-pub-1234567890123456  # with AdSense code (+ ads.txt on microfree.store)
 #
-# Deploy: Cloudflare dashboard → Workers & Pages → Create → Pages → "Upload assets" → upload the deploy folder
-#     or: npx wrangler pages deploy deploy --project-name microfree
+# GitHub Actions (.github/workflows/deploy.yml) runs this and uploads each folder automatically.
 
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")" && pwd)"
 OUT="$ROOT/deploy"
-PUB="${1:-${ADSENSE_PUB_ID:-}}"   # or set ADSENSE_PUB_ID as a Cloudflare Pages environment variable
+PUB="${1:-${ADSENSE_PUB_ID:-}}"
+LOG="${TMPDIR:-/tmp}"
 
 if [ -n "$PUB" ] && [[ ! "$PUB" =~ ^ca-pub-[0-9]{16}$ ]]; then
   echo "Publisher ID must look like ca-pub-1234567890123456"; exit 1
@@ -23,24 +24,24 @@ fi
 rm -rf "$OUT"
 mkdir -p "$OUT"
 
-for dir in "$ROOT"/[0-9][0-9]-*/; do
-  name="$(basename "$dir")"
-  slug="$(grep -o 'rel="canonical" href="https://microfree\.[a-z]*/[^"/]*' "$dir/index.html" | sed 's#.*/##')"
-  [ -n "$slug" ] || { echo "No canonical slug found in $name/index.html"; exit 1; }
-  if [ ! -d "$dir/node_modules" ]; then
-    # Fresh checkout (e.g. Cloudflare Pages / GitHub): install exact versions from package-lock.json
-    echo "[$name] installing dependencies"
-    ( cd "$dir" && npm ci --no-audit --no-fund > "/tmp/microfree-$slug-install.log" 2>&1 ) \
-      || { cat "/tmp/microfree-$slug-install.log"; echo "INSTALL FAILED: $name"; exit 1; }
-  fi
-  echo "[$name] building -> /$slug/"
-  ( cd "$dir" && npm run build > "/tmp/microfree-$slug-build.log" 2>&1 ) \
-    || { cat "/tmp/microfree-$slug-build.log"; echo "BUILD FAILED: $name"; exit 1; }
-  cp -R "$dir/dist" "$OUT/$slug"
-  rm -f "$OUT/$slug/robots.txt" "$OUT/$slug/sitemap.xml"   # the root robots.txt / sitemap.xml cover everything
-done
+# "dir project domain" per tool, from scripts/sites.json
+SITES="$(python3 -c 'import json;c=json.load(open("'"$ROOT"'/scripts/sites.json"));[print(s["dir"],s["project"],s["domain"]) for s in c["sites"]]')"
+ROOT_PROJECT="$(python3 -c 'import json;print(json.load(open("'"$ROOT"'/scripts/sites.json"))["rootProject"])')"
 
-python3 "$ROOT/portal/build_portal.py" "$OUT" "$PUB"
+while read -r name project domain; do
+  dir="$ROOT/$name"
+  if [ ! -d "$dir/node_modules" ]; then
+    echo "[$name] installing dependencies"
+    ( cd "$dir" && npm ci --no-audit --no-fund > "$LOG/mf-$project-install.log" 2>&1 ) \
+      || { cat "$LOG/mf-$project-install.log"; echo "INSTALL FAILED: $name"; exit 1; }
+  fi
+  echo "[$name] building -> https://$domain/"
+  ( cd "$dir" && npm run build > "$LOG/mf-$project-build.log" 2>&1 ) \
+    || { cat "$LOG/mf-$project-build.log"; echo "BUILD FAILED: $name"; exit 1; }
+  cp -R "$dir/dist" "$OUT/$project"
+done <<< "$SITES"
+
+python3 "$ROOT/portal/build_portal.py" "$OUT/$ROOT_PROJECT" "$PUB"
 
 if [ -n "$PUB" ]; then
   TAG="<meta name=\"google-adsense-account\" content=\"$PUB\" /><script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=$PUB\" crossorigin=\"anonymous\"></script>"
@@ -51,10 +52,10 @@ if [ -n "$PUB" ]; then
       TAG="$TAG" perl -0pi -e 's#</head>#$ENV{TAG}\n</head>#' "$f"
     fi
   done
-  echo "AdSense code added to every page; ads.txt written."
+  echo "AdSense code added to every page; ads.txt written to microfree.store."
 else
   find "$OUT" -name "*.html" -exec perl -pi -e 's/<!--ADSENSE_HEAD-->//' {} +
-  echo "Built WITHOUT AdSense code. Re-run with your ca-pub ID once you have it."
+  echo "Built WITHOUT AdSense code (set ADSENSE_PUB_ID once you have it)."
 fi
 
-echo "Done -> $OUT"
+echo "Done -> $OUT ($(ls "$OUT" | wc -l | tr -d ' ') sites)"

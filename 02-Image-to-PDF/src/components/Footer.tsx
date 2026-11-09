@@ -42,12 +42,12 @@ export const Footer: React.FC<FooterProps> = () => {
                 </a>
               </li>
               <li>
-                <a href="/pdf-tools/" className="hover:text-slate-900 transition">
+                <a href="https://pdftools.microfree.store/" className="hover:text-slate-900 transition">
                   PDF Tools Suite
                 </a>
               </li>
               <li>
-                <a href="/pdf-to-word/" className="hover:text-slate-900 transition">
+                <a href="https://pdftoword.microfree.store/" className="hover:text-slate-900 transition">
                   PDF to Word
                 </a>
               </li>
@@ -61,17 +61,17 @@ export const Footer: React.FC<FooterProps> = () => {
             </h4>
             <ul className="mt-3 space-y-2 text-xs text-slate-500">
               <li>
-                <a href="/image-compressor/" className="hover:text-slate-900 transition">
+                <a href="https://imagecompressor.microfree.store/" className="hover:text-slate-900 transition">
                   Image Compressor
                 </a>
               </li>
               <li>
-                <a href="/image-resizer/" className="hover:text-slate-900 transition">
+                <a href="https://imageresizer.microfree.store/" className="hover:text-slate-900 transition">
                   Image Resizer
                 </a>
               </li>
               <li>
-                <a href="/image-converter/" className="hover:text-slate-900 transition">
+                <a href="https://imageconverter.microfree.store/" className="hover:text-slate-900 transition">
                   Image Converter
                 </a>
               </li>
@@ -85,27 +85,27 @@ export const Footer: React.FC<FooterProps> = () => {
             </h4>
             <ul className="mt-3 space-y-2 text-xs text-slate-500">
               <li>
-                <a href="/about/" className="hover:text-slate-900 transition">
+                <a href="https://microfree.store/about/" className="hover:text-slate-900 transition">
                   About MicroFree
                 </a>
               </li>
               <li>
-                <a href="/privacy-policy/" className="hover:text-slate-900 transition font-medium">
+                <a href="https://microfree.store/privacy-policy/" className="hover:text-slate-900 transition font-medium">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/terms/" className="hover:text-slate-900 transition">
+                <a href="https://microfree.store/terms/" className="hover:text-slate-900 transition">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="/disclaimer/" className="hover:text-slate-900 transition">
+                <a href="https://microfree.store/disclaimer/" className="hover:text-slate-900 transition">
                   Disclaimer
                 </a>
               </li>
               <li>
-                <a href="/contact/" className="hover:text-slate-900 transition">
+                <a href="https://microfree.store/contact/" className="hover:text-slate-900 transition">
                   Contact Us
                 </a>
               </li>

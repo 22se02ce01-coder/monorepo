@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://microfree.store/sitemap.xml
-
+Sitemap: https://imagetopdf.microfree.store/sitemap.xml

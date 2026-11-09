@@ -19,16 +19,11 @@
 
 1. **Buy `microfree.store`** and add it to Cloudflare (free plan).
 2. **Create the email address `contact@microfree.store`.** In Cloudflare, go to Email → Email Routing and forward it to your own inbox. The site lists this address on the Contact, About and Privacy pages. If you want a different address, change `CONTACT_EMAIL` in `portal/build_portal.py`.
-3. **Build:** run `bash build-deploy.sh`.
-4. **Deploy:** in Cloudflare, go to Workers & Pages → Create → Pages → Upload assets and upload the `deploy` folder. Then add the custom domain `microfree.store`.
-   - Or run: `npx wrangler pages deploy deploy --project-name microfree`
-5. **Google Search Console:** add `microfree.store`, submit `https://microfree.store/sitemap.xml`, and wait until the pages are indexed (usually 1–3 weeks).
-6. **Apply for AdSense** at https://adsense.google.com and add the site `microfree.store`. Google gives you a publisher ID like `ca-pub-1234567890123456`.
-7. **Rebuild with your ID and redeploy:**
-   ```
-   bash build-deploy.sh ca-pub-1234567890123456
-   ```
-   This adds the AdSense code to every page and creates `/ads.txt`.
+3. **Deploy (automatic):** each tool has its own Cloudflare Pages project and subdomain, listed in `scripts/sites.json` (for example `pdftools.microfree.store`). Every `git push` runs `.github/workflows/deploy.yml`, which builds all 21 sites, uploads them and connects their domains. You need two GitHub secrets set up once: `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
+4. **Check the sites:** open `microfree.store` and a few subdomains, such as `pdftools.microfree.store`.
+5. **Google Search Console:** add a **Domain property** for `microfree.store` (verified through DNS in Cloudflare). This one property covers every subdomain. Submit `https://microfree.store/sitemap.xml` and each tool's sitemap, such as `https://pdftools.microfree.store/sitemap.xml`. Indexing usually takes 1–3 weeks.
+6. **Apply for AdSense** at https://adsense.google.com and add the site `microfree.store`. Add only the root domain; AdSense automatically covers its subdomains. Google gives you a publisher ID like `ca-pub-1234567890123456`.
+7. **Add your ID:** in GitHub, go to the repo → Settings → Secrets and variables → Actions and add the secret `ADSENSE_PUB_ID` = `ca-pub-…`. Then go to the Actions tab → Deploy to Cloudflare Pages → Run workflow. This adds the AdSense code to all 21 sites and creates `microfree.store/ads.txt`, which also covers the subdomains.
 8. Back in AdSense, **click "Verify"** and then **request review**.
 9. **Turn on the GDPR consent message:** in AdSense, go to Privacy & messaging → European regulations message and publish it. Google requires this for visitors from the EEA, the UK and Switzerland.
 10. **After approval:** in AdSense, turn on **Auto ads** for the site. The script is already on every page, so no code change is needed.

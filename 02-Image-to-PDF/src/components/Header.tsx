@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbout, onOpenPrivacy }) =>
     <header className="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md transition-all">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
         {/* Brand Logo */}
-        <a href="/" className="flex items-center gap-2 group" aria-label="MicroFree Home">
+        <a href="https://microfree.store/" className="flex items-center gap-2 group" aria-label="MicroFree Home">
           <img
             src="./MicroFreeLogo.png"
             alt="MicroFree"
@@ -55,13 +55,13 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbout, onOpenPrivacy }) =>
                   <span className="rounded bg-brand-600 px-1.5 py-0.5 text-[9px] font-bold text-white uppercase">Current</span>
                 </a>
                 <a
-                  href="/pdf-tools/"
+                  href="https://pdftools.microfree.store/"
                   className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition"
                 >
                   All PDF Tools
                 </a>
                 <a
-                  href="/pdf-to-word/"
+                  href="https://pdftoword.microfree.store/"
                   className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition"
                 >
                   PDF to Word
@@ -86,19 +86,19 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbout, onOpenPrivacy }) =>
             {imageDropdownOpen && (
               <div className="absolute left-0 mt-1.5 w-56 rounded-xl border border-slate-200 bg-white p-2 shadow-lg z-50">
                 <a
-                  href="/image-compressor/"
+                  href="https://imagecompressor.microfree.store/"
                   className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition"
                 >
                   Image Compressor
                 </a>
                 <a
-                  href="/image-resizer/"
+                  href="https://imageresizer.microfree.store/"
                   className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition"
                 >
                   Image Resizer
                 </a>
                 <a
-                  href="/image-converter/"
+                  href="https://imageconverter.microfree.store/"
                   className="block rounded-lg px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 transition"
                 >
                   Image Converter
@@ -108,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbout, onOpenPrivacy }) =>
           </div>
 
           <a
-            href="/developer-toolbox/"
+            href="https://developertoolbox.microfree.store/"
             className="rounded-lg px-3 py-2 hover:text-brand-600 hover:bg-slate-50 transition"
           >
             Other Tools
@@ -156,21 +156,21 @@ export const Header: React.FC<HeaderProps> = ({ onOpenAbout, onOpenPrivacy }) =>
               Image to PDF Converter (Current)
             </a>
             <a
-              href="/pdf-tools/"
+              href="https://pdftools.microfree.store/"
               onClick={() => setMobileMenuOpen(false)}
               className="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50"
             >
               PDF Tools
             </a>
             <a
-              href="/image-compressor/"
+              href="https://imagecompressor.microfree.store/"
               onClick={() => setMobileMenuOpen(false)}
               className="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50"
             >
               Image Tools
             </a>
             <a
-              href="/developer-toolbox/"
+              href="https://developertoolbox.microfree.store/"
               onClick={() => setMobileMenuOpen(false)}
               className="block rounded-lg px-3 py-2 text-slate-700 hover:bg-slate-50"
             >

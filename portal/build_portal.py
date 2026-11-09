@@ -68,6 +68,16 @@ TOOLS = [
     ("time-zone-converter", "Time Zone Converter", "Everyday Utilities",
      "Compare times across world cities with daylight-saving-aware offsets and a live world clock."),
 ]
+import json as _json
+_SITES = _json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts", "sites.json")))
+TOOL_URL = {x["slug"]: f"https://{x['domain']}/" for x in _SITES["sites"]}
+
+
+def turl(slug):
+    """Public URL of a tool (each tool lives on its own subdomain)."""
+    return TOOL_URL[slug]
+
+
 CATEGORIES = ["PDF Tools", "Image Tools", "Developer Tools", "Calculators", "Everyday Utilities"]
 
 CSS = """
@@ -158,7 +168,7 @@ def head(title, description, path, extra=""):
 def footer():
     cols = []
     for cat in CATEGORIES:
-        links = "".join(f'<li><a href="/{s}/">{esc(n)}</a></li>' for s, n, c, _ in TOOLS if c == cat)
+        links = "".join(f'<li><a href="{turl(s)}">{esc(n)}</a></li>' for s, n, c, _ in TOOLS if c == cat)
         cols.append(f"<div><h4>{esc(cat)}</h4><ul>{links}</ul></div>")
     year = datetime.date.today().year
     return f"""<footer class="site"><div class="wrap">
@@ -183,7 +193,7 @@ def page_home():
     sections = []
     for cat in CATEGORIES:
         cards = "".join(
-            f'<a class="card" href="/{s}/"><strong>{esc(n)}</strong><span>{esc(d)}</span></a>'
+            f'<a class="card" href="{turl(s)}"><strong>{esc(n)}</strong><span>{esc(d)}</span></a>'
             for s, n, c, d in TOOLS if c == cat)
         sections.append(f'<section id="{anchor(cat)}"><h2>{esc(cat)}</h2><div class="grid">{cards}</div></section>')
 
@@ -244,8 +254,8 @@ def page_home():
 <li><strong>Everyday utilities</strong> generate QR codes and secure passwords, change text case, and convert units, currencies and time zones.</li>
 </ul>
 <h3>How to choose the right tool</h3>
-<p>If you need to send a document by email and it is too large, start with the <a href="/image-compressor/">Image Compressor</a> for photos or the compress option in <a href="/pdf-tools/">PDF Tools</a> for PDFs. If a government or job portal asks for a photo of a specific size, use the <a href="/image-resizer/">Image Resizer</a> and then the compressor to reach the required KB. If you have several phone photos of a document, the <a href="/image-to-pdf/">Image to PDF</a> tool turns them into one tidy file.</p>
-<p>Planning a loan? The <a href="/emi-calculator/">EMI Calculator</a> shows how much of each payment goes to interest and how the balance falls over time. Running a small business in India? The <a href="/gst-calculator/">GST Calculator</a> adds or removes tax and splits it into central and state components.</p>
+<p>If you need to send a document by email and it is too large, start with the <a href="{turl("image-compressor")}">Image Compressor</a> for photos or the compress option in <a href="{turl("pdf-tools")}">PDF Tools</a> for PDFs. If a government or job portal asks for a photo of a specific size, use the <a href="{turl("image-resizer")}">Image Resizer</a> and then the compressor to reach the required KB. If you have several phone photos of a document, the <a href="{turl("image-to-pdf")}">Image to PDF</a> tool turns them into one tidy file.</p>
+<p>Planning a loan? The <a href="{turl("emi-calculator")}">EMI Calculator</a> shows how much of each payment goes to interest and how the balance falls over time. Running a small business in India? The <a href="{turl("gst-calculator")}">GST Calculator</a> adds or removes tax and splits it into central and state components.</p>
 <h2>Frequently asked questions</h2>
 {faq_html}
 </section>
@@ -265,7 +275,7 @@ def simple_page(path, title, description, h1, inner, updated=True):
 
 
 def page_about():
-    tool_list = "".join(f'<li><a href="/{s}/">{esc(n)}</a> – {esc(d)}</li>' for s, n, c, d in TOOLS)
+    tool_list = "".join(f'<li><a href="{turl(s)}">{esc(n)}</a> – {esc(d)}</li>' for s, n, c, d in TOOLS)
     inner = f"""
 <p>MicroFree is an independent website that offers {len(TOOLS)} free online tools for working with PDFs and images, everyday calculations, and common developer tasks. Our aim is simple: tools that are quick to open, easy to understand and respectful of your privacy.</p>
 <h2>Our approach</h2>
@@ -453,9 +463,9 @@ def main():
 
     write(out, "robots.txt", f"User-agent: *\nAllow: /\n\nSitemap: {SITE_URL}/sitemap.xml\n")
     today = datetime.date.today().isoformat()
-    urls = ["/", "/about/", "/contact/", "/privacy-policy/", "/terms/", "/disclaimer/"] + [f"/{s}/" for s, *_ in TOOLS]
+    urls = ["/", "/about/", "/contact/", "/privacy-policy/", "/terms/", "/disclaimer/"]
     entries = "".join(
-        f"  <url><loc>{SITE_URL}{u}</loc><lastmod>{today}</lastmod><priority>{'1.0' if u == '/' else ('0.9' if u.count('/') == 2 and u.strip('/') in [t[0] for t in TOOLS] else '0.3')}</priority></url>\n"
+        f"  <url><loc>{SITE_URL}{u}</loc><lastmod>{today}</lastmod><priority>{'1.0' if u == '/' else '0.3'}</priority></url>\n"
         for u in urls)
     write(out, "sitemap.xml", f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{entries}</urlset>\n')
 

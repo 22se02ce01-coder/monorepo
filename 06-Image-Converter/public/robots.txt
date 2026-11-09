@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://microfree.store/image-converter/sitemap.xml
-
+Sitemap: https://imageconverter.microfree.store/sitemap.xml

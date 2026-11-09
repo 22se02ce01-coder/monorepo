@@ -37,32 +37,32 @@ export const Footer: React.FC<FooterProps> = () => {
             </h4>
             <ul className="mt-3 space-y-2 text-xs text-slate-500">
               <li>
-                <a href="/pdf-tools/" className="text-brand-600 font-semibold hover:underline">
+                <a href="https://pdftools.microfree.store/" className="text-brand-600 font-semibold hover:underline">
                   All PDF Tools Suite
                 </a>
               </li>
               <li>
-                <a href="/image-to-pdf/" className="hover:text-slate-900 transition">
+                <a href="https://imagetopdf.microfree.store/" className="hover:text-slate-900 transition">
                   Image to PDF
                 </a>
               </li>
               <li>
-                <a href="/pdf-to-word/" className="hover:text-slate-900 transition">
+                <a href="https://pdftoword.microfree.store/" className="hover:text-slate-900 transition">
                   PDF to Word
                 </a>
               </li>
               <li>
-                <a href="/image-compressor/" className="hover:text-slate-900 transition">
+                <a href="https://imagecompressor.microfree.store/" className="hover:text-slate-900 transition">
                   Image Compressor
                 </a>
               </li>
               <li>
-                <a href="/image-resizer/" className="hover:text-slate-900 transition">
+                <a href="https://imageresizer.microfree.store/" className="hover:text-slate-900 transition">
                   Image Resizer
                 </a>
               </li>
               <li>
-                <a href="/image-converter/" className="hover:text-slate-900 transition">
+                <a href="https://imageconverter.microfree.store/" className="hover:text-slate-900 transition">
                   Image Converter
                 </a>
               </li>
@@ -76,22 +76,22 @@ export const Footer: React.FC<FooterProps> = () => {
             </h4>
             <ul className="mt-3 space-y-2 text-xs text-slate-500">
               <li>
-                <a href="/json-formatter/" className="hover:text-slate-900 transition">
+                <a href="https://jsonformatter.microfree.store/" className="hover:text-slate-900 transition">
                   JSON Formatter & Validator
                 </a>
               </li>
               <li>
-                <a href="/base64-tools/" className="hover:text-slate-900 transition">
+                <a href="https://base64tools.microfree.store/" className="hover:text-slate-900 transition">
                   Base64 Encode & Decode
                 </a>
               </li>
               <li>
-                <a href="/jwt-decoder/" className="hover:text-slate-900 transition">
+                <a href="https://jwtdecoder.microfree.store/" className="hover:text-slate-900 transition">
                   JWT Token Decoder
                 </a>
               </li>
               <li>
-                <a href="/developer-toolbox/" className="hover:text-slate-900 transition">
+                <a href="https://developertoolbox.microfree.store/" className="hover:text-slate-900 transition">
                   Developer Toolbox (15+ Tools)
                 </a>
               </li>
@@ -105,37 +105,37 @@ export const Footer: React.FC<FooterProps> = () => {
             </h4>
             <ul className="mt-3 space-y-2 text-xs text-slate-500">
               <li>
-                <a href="/percentage-calculator/" className="hover:text-slate-900 transition">
+                <a href="https://percentagecalculator.microfree.store/" className="hover:text-slate-900 transition">
                   Percentage Calculator
                 </a>
               </li>
               <li>
-                <a href="/age-calculator/" className="hover:text-slate-900 transition">
+                <a href="https://agecalculator.microfree.store/" className="hover:text-slate-900 transition">
                   Age & Milestone Calculator
                 </a>
               </li>
               <li>
-                <a href="/emi-calculator/" className="hover:text-slate-900 transition">
+                <a href="https://emicalculator.microfree.store/" className="hover:text-slate-900 transition">
                   Loan EMI Calculator
                 </a>
               </li>
               <li>
-                <a href="/gst-calculator/" className="hover:text-slate-900 transition">
+                <a href="https://gstcalculator.microfree.store/" className="hover:text-slate-900 transition">
                   GST Tax Calculator
                 </a>
               </li>
               <li>
-                <a href="/unit-converter/" className="hover:text-slate-900 transition">
+                <a href="https://unitconverter.microfree.store/" className="hover:text-slate-900 transition">
                   Universal Unit Converter
                 </a>
               </li>
               <li>
-                <a href="/currency-converter/" className="hover:text-slate-900 transition">
+                <a href="https://currencyconverter.microfree.store/" className="hover:text-slate-900 transition">
                   Currency Converter
                 </a>
               </li>
               <li>
-                <a href="/time-zone-converter/" className="hover:text-slate-900 transition">
+                <a href="https://timezoneconverter.microfree.store/" className="hover:text-slate-900 transition">
                   Time Zone Converter
                 </a>
               </li>
@@ -149,33 +149,33 @@ export const Footer: React.FC<FooterProps> = () => {
             </h4>
             <ul className="mt-3 space-y-2 text-xs text-slate-500">
               <li>
-                <a href="/about/" className="hover:text-slate-900 transition">
+                <a href="https://microfree.store/about/" className="hover:text-slate-900 transition">
                   About MicroFree
                 </a>
               </li>
               <li>
-                <a href="/privacy-policy/" className="hover:text-slate-900 transition font-medium">
+                <a href="https://microfree.store/privacy-policy/" className="hover:text-slate-900 transition font-medium">
                   Privacy Policy
                 </a>
               </li>
               <li>
-                <a href="/terms/" className="hover:text-slate-900 transition">
+                <a href="https://microfree.store/terms/" className="hover:text-slate-900 transition">
                   Terms of Service
                 </a>
               </li>
               <li>
-                <a href="/disclaimer/" className="hover:text-slate-900 transition">
+                <a href="https://microfree.store/disclaimer/" className="hover:text-slate-900 transition">
                   Disclaimer
                 </a>
               </li>
               <li>
-                <a href="/contact/" className="hover:text-slate-900 transition">
+                <a href="https://microfree.store/contact/" className="hover:text-slate-900 transition">
                   Contact Us
                 </a>
               </li>
               <li className="pt-2">
                 <a
-                  href="/qr-generator/"
+                  href="https://qrgenerator.microfree.store/"
                   className="inline-flex items-center gap-1 text-[11px] text-brand-600 hover:underline"
                 >
                   <span>QR Code Generator</span>
@@ -184,7 +184,7 @@ export const Footer: React.FC<FooterProps> = () => {
               </li>
               <li>
                 <a
-                  href="/password-generator/"
+                  href="https://passwordgenerator.microfree.store/"
                   className="inline-flex items-center gap-1 text-[11px] text-brand-600 hover:underline"
                 >
                   <span>Password Generator</span>

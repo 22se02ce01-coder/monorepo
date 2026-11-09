@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://microfree.store/age-calculator/sitemap.xml
+Sitemap: https://agecalculator.microfree.store/sitemap.xml

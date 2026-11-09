@@ -1,0 +1,146 @@
+{
+  "rootDomain": "microfree.store",
+  "rootProject": "microfree-home",
+  "sites": [
+    {
+      "dir": "01-PDF-Tools",
+      "slug": "pdf-tools",
+      "subdomain": "pdftools",
+      "domain": "pdftools.microfree.store",
+      "project": "microfree-pdftools"
+    },
+    {
+      "dir": "02-Image-to-PDF",
+      "slug": "image-to-pdf",
+      "subdomain": "imagetopdf",
+      "domain": "imagetopdf.microfree.store",
+      "project": "microfree-imagetopdf"
+    },
+    {
+      "dir": "03-PDF-to-Word",
+      "slug": "pdf-to-word",
+      "subdomain": "pdftoword",
+      "domain": "pdftoword.microfree.store",
+      "project": "microfree-pdftoword"
+    },
+    {
+      "dir": "04-Image-Compressor",
+      "slug": "image-compressor",
+      "subdomain": "imagecompressor",
+      "domain": "imagecompressor.microfree.store",
+      "project": "microfree-imagecompressor"
+    },
+    {
+      "dir": "05-Image-Resizer",
+      "slug": "image-resizer",
+      "subdomain": "imageresizer",
+      "domain": "imageresizer.microfree.store",
+      "project": "microfree-imageresizer"
+    },
+    {
+      "dir": "06-Image-Converter",
+      "slug": "image-converter",
+      "subdomain": "imageconverter",
+      "domain": "imageconverter.microfree.store",
+      "project": "microfree-imageconverter"
+    },
+    {
+      "dir": "07-JSON-Formatter",
+      "slug": "json-formatter",
+      "subdomain": "jsonformatter",
+      "domain": "jsonformatter.microfree.store",
+      "project": "microfree-jsonformatter"
+    },
+    {
+      "dir": "08-Base64-Tools",
+      "slug": "base64-tools",
+      "subdomain": "base64tools",
+      "domain": "base64tools.microfree.store",
+      "project": "microfree-base64tools"
+    },
+    {
+      "dir": "09-JWT-Decoder",
+      "slug": "jwt-decoder",
+      "subdomain": "jwtdecoder",
+      "domain": "jwtdecoder.microfree.store",
+      "project": "microfree-jwtdecoder"
+    },
+    {
+      "dir": "10-Developer-Toolbox",
+      "slug": "developer-toolbox",
+      "subdomain": "developertoolbox",
+      "domain": "developertoolbox.microfree.store",
+      "project": "microfree-developertoolbox"
+    },
+    {
+      "dir": "11-Percentage-Calculator",
+      "slug": "percentage-calculator",
+      "subdomain": "percentagecalculator",
+      "domain": "percentagecalculator.microfree.store",
+      "project": "microfree-percentagecalculator"
+    },
+    {
+      "dir": "12-Age-Calculator",
+      "slug": "age-calculator",
+      "subdomain": "agecalculator",
+      "domain": "agecalculator.microfree.store",
+      "project": "microfree-agecalculator"
+    },
+    {
+      "dir": "13-EMI-Calculator",
+      "slug": "emi-calculator",
+      "subdomain": "emicalculator",
+      "domain": "emicalculator.microfree.store",
+      "project": "microfree-emicalculator"
+    },
+    {
+      "dir": "14-GST-Calculator",
+      "slug": "gst-calculator",
+      "subdomain": "gstcalculator",
+      "domain": "gstcalculator.microfree.store",
+      "project": "microfree-gstcalculator"
+    },
+    {
+      "dir": "15-QR-Generator",
+      "slug": "qr-generator",
+      "subdomain": "qrgenerator",
+      "domain": "qrgenerator.microfree.store",
+      "project": "microfree-qrgenerator"
+    },
+    {
+      "dir": "16-Password-Generator",
+      "slug": "password-generator",
+      "subdomain": "passwordgenerator",
+      "domain": "passwordgenerator.microfree.store",
+      "project": "microfree-passwordgenerator"
+    },
+    {
+      "dir": "17-Text-Converter",
+      "slug": "text-converter",
+      "subdomain": "textconverter",
+      "domain": "textconverter.microfree.store",
+      "project": "microfree-textconverter"
+    },
+    {
+      "dir": "18-Unit-Converter",
+      "slug": "unit-converter",
+      "subdomain": "unitconverter",
+      "domain": "unitconverter.microfree.store",
+      "project": "microfree-unitconverter"
+    },
+    {
+      "dir": "19-Currency-Converter",
+      "slug": "currency-converter",
+      "subdomain": "currencyconverter",
+      "domain": "currencyconverter.microfree.store",
+      "project": "microfree-currencyconverter"
+    },
+    {
+      "dir": "20-Time-Zone-Converter",
+      "slug": "time-zone-converter",
+      "subdomain": "timezoneconverter",
+      "domain": "timezoneconverter.microfree.store",
+      "project": "microfree-timezoneconverter"
+    }
+  ]
+}

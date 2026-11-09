@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://microfree.store/currency-converter/sitemap.xml
+Sitemap: https://currencyconverter.microfree.store/sitemap.xml

@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://microfree.store/pdf-tools/sitemap.xml
-
+Sitemap: https://pdftools.microfree.store/sitemap.xml

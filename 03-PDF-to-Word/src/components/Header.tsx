@@ -19,46 +19,46 @@ export const Header: React.FC<HeaderProps> = ({ currentTool = '03-PDF-to-Word', 
     {
       name: 'PDF Tools',
       items: [
-        { name: 'All PDF Tools', path: '/pdf-tools/', id: '01-PDF-Tools' },
-        { name: 'Image to PDF', path: '/image-to-pdf/', id: '02-Image-to-PDF' },
-        { name: 'PDF to Word', path: '/pdf-to-word/', id: '03-PDF-to-Word' },
+        { name: 'All PDF Tools', path: 'https://pdftools.microfree.store/', id: '01-PDF-Tools' },
+        { name: 'Image to PDF', path: 'https://imagetopdf.microfree.store/', id: '02-Image-to-PDF' },
+        { name: 'PDF to Word', path: 'https://pdftoword.microfree.store/', id: '03-PDF-to-Word' },
       ],
     },
     {
       name: 'Image Tools',
       items: [
-        { name: 'Image Compressor', path: '/image-compressor/', id: '04-Image-Compressor' },
-        { name: 'Image Resizer', path: '/image-resizer/', id: '05-Image-Resizer' },
-        { name: 'Image Converter', path: '/image-converter/', id: '06-Image-Converter' },
+        { name: 'Image Compressor', path: 'https://imagecompressor.microfree.store/', id: '04-Image-Compressor' },
+        { name: 'Image Resizer', path: 'https://imageresizer.microfree.store/', id: '05-Image-Resizer' },
+        { name: 'Image Converter', path: 'https://imageconverter.microfree.store/', id: '06-Image-Converter' },
       ],
     },
     {
       name: 'Developer',
       items: [
-        { name: 'JSON Formatter', path: '/json-formatter/', id: '07-JSON-Formatter' },
-        { name: 'Base64 Tools', path: '/base64-tools/', id: '08-Base64-Tools' },
-        { name: 'JWT Decoder', path: '/jwt-decoder/', id: '09-JWT-Decoder' },
-        { name: 'Developer Toolbox', path: '/developer-toolbox/', id: '10-Developer-Toolbox' },
+        { name: 'JSON Formatter', path: 'https://jsonformatter.microfree.store/', id: '07-JSON-Formatter' },
+        { name: 'Base64 Tools', path: 'https://base64tools.microfree.store/', id: '08-Base64-Tools' },
+        { name: 'JWT Decoder', path: 'https://jwtdecoder.microfree.store/', id: '09-JWT-Decoder' },
+        { name: 'Developer Toolbox', path: 'https://developertoolbox.microfree.store/', id: '10-Developer-Toolbox' },
       ],
     },
     {
       name: 'Calculators',
       items: [
-        { name: 'Percentage Calc', path: '/percentage-calculator/', id: '11-Percentage-Calculator' },
-        { name: 'Age Calculator', path: '/age-calculator/', id: '12-Age-Calculator' },
-        { name: 'EMI Calculator', path: '/emi-calculator/', id: '13-EMI-Calculator' },
-        { name: 'GST Calculator', path: '/gst-calculator/', id: '14-GST-Calculator' },
+        { name: 'Percentage Calc', path: 'https://percentagecalculator.microfree.store/', id: '11-Percentage-Calculator' },
+        { name: 'Age Calculator', path: 'https://agecalculator.microfree.store/', id: '12-Age-Calculator' },
+        { name: 'EMI Calculator', path: 'https://emicalculator.microfree.store/', id: '13-EMI-Calculator' },
+        { name: 'GST Calculator', path: 'https://gstcalculator.microfree.store/', id: '14-GST-Calculator' },
       ],
     },
     {
       name: 'Utilities',
       items: [
-        { name: 'QR Code Generator', path: '/qr-generator/', id: '15-QR-Generator' },
-        { name: 'Password Generator', path: '/password-generator/', id: '16-Password-Generator' },
-        { name: 'Text Converter', path: '/text-converter/', id: '17-Text-Converter' },
-        { name: 'Unit Converter', path: '/unit-converter/', id: '18-Unit-Converter' },
-        { name: 'Currency Converter', path: '/currency-converter/', id: '19-Currency-Converter' },
-        { name: 'Time Zone Converter', path: '/time-zone-converter/', id: '20-Time-Zone-Converter' },
+        { name: 'QR Code Generator', path: 'https://qrgenerator.microfree.store/', id: '15-QR-Generator' },
+        { name: 'Password Generator', path: 'https://passwordgenerator.microfree.store/', id: '16-Password-Generator' },
+        { name: 'Text Converter', path: 'https://textconverter.microfree.store/', id: '17-Text-Converter' },
+        { name: 'Unit Converter', path: 'https://unitconverter.microfree.store/', id: '18-Unit-Converter' },
+        { name: 'Currency Converter', path: 'https://currencyconverter.microfree.store/', id: '19-Currency-Converter' },
+        { name: 'Time Zone Converter', path: 'https://timezoneconverter.microfree.store/', id: '20-Time-Zone-Converter' },
       ],
     },
   ];
@@ -66,7 +66,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTool = '03-PDF-to-Word', 
   return (
     <header className="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/95 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-16">
-        <a href="/" className="flex items-center gap-2 group" aria-label="MicroFree Home">
+        <a href="https://microfree.store/" className="flex items-center gap-2 group" aria-label="MicroFree Home">
           <img
             src="./MicroFreeLogo.png"
             alt="MicroFree"

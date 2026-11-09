@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://microfree.store/emi-calculator/sitemap.xml
+Sitemap: https://emicalculator.microfree.store/sitemap.xml

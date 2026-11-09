@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://microfree.store/jwt-decoder/sitemap.xml
+Sitemap: https://jwtdecoder.microfree.store/sitemap.xml
