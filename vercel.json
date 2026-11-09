@@ -1,0 +1,86 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "1-pdf-tools": {
+      "root": "01-PDF-Tools",
+      "framework": "vite"
+    },
+    "2-image-to-pdf": {
+      "root": "02-Image-to-PDF",
+      "framework": "vite"
+    },
+    "3-pdf-to-word": {
+      "root": "03-PDF-to-Word",
+      "framework": "vite"
+    },
+    "4-image-compressor": {
+      "root": "04-Image-Compressor",
+      "framework": "vite"
+    },
+    "5-image-resizer": {
+      "root": "05-Image-Resizer",
+      "framework": "vite"
+    },
+    "6-image-converter": {
+      "root": "06-Image-Converter",
+      "framework": "vite"
+    },
+    "7-json-formatter": {
+      "root": "07-JSON-Formatter",
+      "framework": "vite"
+    },
+    "8-base64-tools": {
+      "root": "08-Base64-Tools",
+      "framework": "vite"
+    },
+    "9-jwt-decoder": {
+      "root": "09-JWT-Decoder",
+      "framework": "vite"
+    },
+    "0-developer-toolbox": {
+      "root": "10-Developer-Toolbox",
+      "framework": "vite"
+    },
+    "1-percentage-calculator": {
+      "root": "11-Percentage-Calculator",
+      "framework": "vite"
+    },
+    "2-age-calculator": {
+      "root": "12-Age-Calculator",
+      "framework": "vite"
+    },
+    "3-emi-calculator": {
+      "root": "13-EMI-Calculator",
+      "framework": "vite"
+    },
+    "4-gst-calculator": {
+      "root": "14-GST-Calculator",
+      "framework": "vite"
+    },
+    "5-qr-generator": {
+      "root": "15-QR-Generator",
+      "framework": "vite"
+    },
+    "6-password-generator": {
+      "root": "16-Password-Generator",
+      "framework": "vite"
+    },
+    "7-text-converter": {
+      "root": "17-Text-Converter",
+      "framework": "vite"
+    },
+    "8-unit-converter": {
+      "root": "18-Unit-Converter",
+      "framework": "vite"
+    },
+    "9-currency-converter": {
+      "root": "19-Currency-Converter",
+      "framework": "vite"
+    },
+    "0-time-zone-converter": {
+      "root": "20-Time-Zone-Converter",
+      "framework": "vite"
+    }
+  },
+  "rewrites": []
+}
