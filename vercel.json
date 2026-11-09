@@ -82,5 +82,133 @@
       "framework": "vite"
     }
   },
-  "rewrites": []
+  "rewrites": [
+    {
+      "source": "/pdf-tools/(.*)",
+      "destination": {
+        "service": "1-pdf-tools"
+      }
+    },
+    {
+      "source": "/image-to-pdf/(.*)",
+      "destination": {
+        "service": "2-image-to-pdf"
+      }
+    },
+    {
+      "source": "/pdf-to-word/(.*)",
+      "destination": {
+        "service": "3-pdf-to-word"
+      }
+    },
+    {
+      "source": "/image-compressor/(.*)",
+      "destination": {
+        "service": "4-image-compressor"
+      }
+    },
+    {
+      "source": "/image-resizer/(.*)",
+      "destination": {
+        "service": "5-image-resizer"
+      }
+    },
+    {
+      "source": "/image-converter/(.*)",
+      "destination": {
+        "service": "6-image-converter"
+      }
+    },
+    {
+      "source": "/json-formatter/(.*)",
+      "destination": {
+        "service": "7-json-formatter"
+      }
+    },
+    {
+      "source": "/base64-tools/(.*)",
+      "destination": {
+        "service": "8-base64-tools"
+      }
+    },
+    {
+      "source": "/jwt-decoder/(.*)",
+      "destination": {
+        "service": "9-jwt-decoder"
+      }
+    },
+    {
+      "source": "/developer-toolbox/(.*)",
+      "destination": {
+        "service": "0-developer-toolbox"
+      }
+    },
+    {
+      "source": "/percentage-calculator/(.*)",
+      "destination": {
+        "service": "1-percentage-calculator"
+      }
+    },
+    {
+      "source": "/age-calculator/(.*)",
+      "destination": {
+        "service": "2-age-calculator"
+      }
+    },
+    {
+      "source": "/emi-calculator/(.*)",
+      "destination": {
+        "service": "3-emi-calculator"
+      }
+    },
+    {
+      "source": "/gst-calculator/(.*)",
+      "destination": {
+        "service": "4-gst-calculator"
+      }
+    },
+    {
+      "source": "/qr-generator/(.*)",
+      "destination": {
+        "service": "5-qr-generator"
+      }
+    },
+    {
+      "source": "/password-generator/(.*)",
+      "destination": {
+        "service": "6-password-generator"
+      }
+    },
+    {
+      "source": "/text-converter/(.*)",
+      "destination": {
+        "service": "7-text-converter"
+      }
+    },
+    {
+      "source": "/unit-converter/(.*)",
+      "destination": {
+        "service": "8-unit-converter"
+      }
+    },
+    {
+      "source": "/currency-converter/(.*)",
+      "destination": {
+        "service": "9-currency-converter"
+      }
+    },
+    {
+      "source": "/time-zone-converter/(.*)",
+      "destination": {
+        "service": "0-time-zone-converter"
+      }
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/pdf-tools/",
+      "permanent": false
+    }
+  ]
 }
