@@ -1,0 +1,219 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "pdf-tools": {
+      "root": "01-PDF-Tools",
+      "framework": "vite"
+    },
+    "image-to-pdf": {
+      "root": "02-Image-to-PDF",
+      "framework": "vite"
+    },
+    "pdf-to-word": {
+      "root": "03-PDF-to-Word",
+      "framework": "vite"
+    },
+    "image-compressor": {
+      "root": "04-Image-Compressor",
+      "framework": "vite"
+    },
+    "image-resizer": {
+      "root": "05-Image-Resizer",
+      "framework": "vite"
+    },
+    "image-converter": {
+      "root": "06-Image-Converter",
+      "framework": "vite"
+    },
+    "json-formatter": {
+      "root": "07-JSON-Formatter",
+      "framework": "vite"
+    },
+    "base64-tools": {
+      "root": "08-Base64-Tools",
+      "framework": "vite"
+    },
+    "jwt-decoder": {
+      "root": "09-JWT-Decoder",
+      "framework": "vite"
+    },
+    "developer-toolbox": {
+      "root": "10-Developer-Toolbox",
+      "framework": "vite"
+    },
+    "percentage-calculator": {
+      "root": "11-Percentage-Calculator",
+      "framework": "vite"
+    },
+    "age-calculator": {
+      "root": "12-Age-Calculator",
+      "framework": "vite"
+    },
+    "emi-calculator": {
+      "root": "13-EMI-Calculator",
+      "framework": "vite"
+    },
+    "gst-calculator": {
+      "root": "14-GST-Calculator",
+      "framework": "vite"
+    },
+    "qr-generator": {
+      "root": "15-QR-Generator",
+      "framework": "vite"
+    },
+    "password-generator": {
+      "root": "16-Password-Generator",
+      "framework": "vite"
+    },
+    "text-converter": {
+      "root": "17-Text-Converter",
+      "framework": "vite"
+    },
+    "unit-converter": {
+      "root": "18-Unit-Converter",
+      "framework": "vite"
+    },
+    "currency-converter": {
+      "root": "19-Currency-Converter",
+      "framework": "vite"
+    },
+    "time-zone-converter": {
+      "root": "20-Time-Zone-Converter",
+      "framework": "vite"
+    },
+    "home": {
+      "root": "portal",
+      "framework": null,
+      "buildCommand": "python3 build_portal.py dist",
+      "outputDirectory": "dist"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/pdf-tools/(.*)",
+      "destination": {
+        "service": "pdf-tools"
+      }
+    },
+    {
+      "source": "/image-to-pdf/(.*)",
+      "destination": {
+        "service": "image-to-pdf"
+      }
+    },
+    {
+      "source": "/pdf-to-word/(.*)",
+      "destination": {
+        "service": "pdf-to-word"
+      }
+    },
+    {
+      "source": "/image-compressor/(.*)",
+      "destination": {
+        "service": "image-compressor"
+      }
+    },
+    {
+      "source": "/image-resizer/(.*)",
+      "destination": {
+        "service": "image-resizer"
+      }
+    },
+    {
+      "source": "/image-converter/(.*)",
+      "destination": {
+        "service": "image-converter"
+      }
+    },
+    {
+      "source": "/json-formatter/(.*)",
+      "destination": {
+        "service": "json-formatter"
+      }
+    },
+    {
+      "source": "/base64-tools/(.*)",
+      "destination": {
+        "service": "base64-tools"
+      }
+    },
+    {
+      "source": "/jwt-decoder/(.*)",
+      "destination": {
+        "service": "jwt-decoder"
+      }
+    },
+    {
+      "source": "/developer-toolbox/(.*)",
+      "destination": {
+        "service": "developer-toolbox"
+      }
+    },
+    {
+      "source": "/percentage-calculator/(.*)",
+      "destination": {
+        "service": "percentage-calculator"
+      }
+    },
+    {
+      "source": "/age-calculator/(.*)",
+      "destination": {
+        "service": "age-calculator"
+      }
+    },
+    {
+      "source": "/emi-calculator/(.*)",
+      "destination": {
+        "service": "emi-calculator"
+      }
+    },
+    {
+      "source": "/gst-calculator/(.*)",
+      "destination": {
+        "service": "gst-calculator"
+      }
+    },
+    {
+      "source": "/qr-generator/(.*)",
+      "destination": {
+        "service": "qr-generator"
+      }
+    },
+    {
+      "source": "/password-generator/(.*)",
+      "destination": {
+        "service": "password-generator"
+      }
+    },
+    {
+      "source": "/text-converter/(.*)",
+      "destination": {
+        "service": "text-converter"
+      }
+    },
+    {
+      "source": "/unit-converter/(.*)",
+      "destination": {
+        "service": "unit-converter"
+      }
+    },
+    {
+      "source": "/currency-converter/(.*)",
+      "destination": {
+        "service": "currency-converter"
+      }
+    },
+    {
+      "source": "/time-zone-converter/(.*)",
+      "destination": {
+        "service": "time-zone-converter"
+      }
+    },
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "home"
+      }
+    }
+  ]
+}
