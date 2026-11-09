@@ -28,3 +28,6 @@ Thumbs.db
 # Personal notes (not part of the website)
 quetion.txt
 testgrid.txt
+
+# Vercel test build output
+vercel-out/
